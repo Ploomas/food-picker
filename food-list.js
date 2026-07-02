@@ -167,7 +167,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Popeyes",
-      "image": "https://images.keizai.biz/colombo_keizai/photonews/1614570974_b.jpg"
+      "image": "https://townsquare.media/site/166/files/2019/10/Popeyes-Chicken-Sandwich.png?w=1200&q=75&format=natural"
     },
     {
       "name": "KFC",
@@ -219,7 +219,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Eggs",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scrambled_eggs.jpg"
+      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80"
     },
     {
       "name": "Bread / flatbread",
@@ -227,7 +227,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Toast",
-      "image": "https://www.jagranimages.com/images/newimg/13042025/13_04_2025-side_effects_of_bread_in_breakfast_23918008.jpg"
+      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80"
     },
     {
       "name": "Salad",
