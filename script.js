@@ -2,7 +2,7 @@ const foods = {
   sugar: [
     food("Waffles", "waffles"),
     food("Cake", "cake"),
-    food("Kinder Bueno cake", "chocolateCake"),
+    food("Kinder Bueno", "chocolateCake"),
     food("Chocolate", "chocolate"),
     food("Dubai chocolate", "chocolate"),
     food("Ice cream", "iceCream"),

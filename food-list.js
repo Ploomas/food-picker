@@ -12,7 +12,7 @@ window.FOOD_PICKER_FOODS = {
       "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=900&h=1200&fit=crop&auto=format&q=80"
     },
     {
-      "name": "Kinder Bueno cake",
+      "name": "Kinder Bueno",
       "image": "https://cdn.mafrservices.com/pim-content/KWT/media/product/317301/1722866403/317301_main.jpg"
     },
     {
@@ -21,7 +21,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Dubai chocolate",
-      "image": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Dubai_chocolate_on_a_plate_02.jpg"
     },
     {
       "name": "Ice cream",
@@ -57,7 +57,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Donuts",
-      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Glazed-Donut.jpg"
     },
     {
       "name": "Pancakes",
@@ -151,7 +151,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Sarma",
-      "image": "https://baseec-img-mng.akamaized.net/images/item/origin/c2eaff0d9d447d2ef8a8ab70cff92a06.jpg?imformat=generic&q=90&im=Resize,width=900,type=normal"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Yaprak_sarma%2C_Kayseri_style.jpg"
     },
     {
       "name": "Doner",
@@ -167,15 +167,15 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Popeyes",
-      "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://townsquare.media/site/166/files/2019/10/Popeyes-Chicken-Sandwich.png?w=1200&q=75&format=natural"
     },
     {
       "name": "KFC",
-      "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://www.kindpng.com/picc/m/3-34196_donald-trump-kfc-fried-chicken-kfc-bucket-png.png"
     },
     {
       "name": "McDonald's",
-      "image": "https://img0.didiglobal.com/static/soda_public/img_a4612d7c2e489f7108f421056e3e020b.png"
+      "image": "https://toppng.com/uploads/preview/sub-salad-for-fries-no-problem-at-tucson-mcdonalds-medium-big-mac-meal-115635493996e6wa0n9k6.png"
     },
     {
       "name": "Lahmacun",
@@ -203,7 +203,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Iskender",
-      "image": "https://img-hopi.mncdn.com/cd/3d/cd3d5d0380fd4df5991071ac47238a2a.png"
+      "image": "https://cdn.website.dish.co/media/c4/4c/5538197/Piya-Kebap-Haus-close-up-of-iskender-kebab-garnished-with-tomato-and-parsley-served-with-yogurt-jpg.jpg"
     },
     {
       "name": "Menemen",
@@ -247,11 +247,11 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Steak",
-      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=900&h=1200&fit=crop&auto=format&q=80"
     },
     {
       "name": "Beans",
-      "image": "https://images.unsplash.com/photo-1515516969-d4008cc6241a?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://www.bhf.org.uk/-/media/images/information-support/heart-matters/2026/febuary/eat-well/beans-on-toast/beans-on-toast-bowl-ssnoexp-800x600.jpg?h=600&hash=386FD8D51C79CCC4A057874C19216FD8&la=en&rev=03ce8e46a3f942aba163f1d3a631e067&w=800"
     },
     {
       "name": "Meatballs",
