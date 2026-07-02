@@ -8,77 +8,84 @@
   </head>
   <body>
     <main class="app">
-      <section class="choice-screen" id="choiceScreen" aria-labelledby="choiceTitle">
-        <div class="choice-copy">
-          <p class="eyebrow">Zain's food chooser</p>
-          <h1 id="choiceTitle">What are you craving?</h1>
-          <p class="subcopy">Start with the mood, then swipe until something finally looks worth eating.</p>
-          <div class="mini-stats" aria-label="Food list summary">
-            <span>Photos on every card</span>
-            <span>Swipe left / right</span>
-            <span>Final yes list</span>
+      <div class="phone-frame">
+        <div class="phone-notch" aria-hidden="true">
+          <span></span>
+          <i></i>
+        </div>
+
+        <section class="choice-screen" id="choiceScreen" aria-labelledby="choiceTitle">
+          <div class="phone-top">
+            <span class="top-icon" aria-hidden="true">●</span>
+            <span class="streak-pill"><b>🔥</b> Food</span>
+            <span class="top-icon chat" aria-hidden="true">●●</span>
           </div>
-        </div>
 
-        <div class="choice-grid" aria-label="Choose food type">
-          <button class="mood-card sugar" type="button" data-start="sugar">
-            <span class="mood-photo" aria-hidden="true"></span>
-            <span class="mood-pill">Sweet</span>
-            <span class="mood-label">Sugar</span>
-            <span class="mood-hint">desserts, fruit, Nutella</span>
-          </button>
-
-          <button class="mood-card salty" type="button" data-start="salty">
-            <span class="mood-photo" aria-hidden="true"></span>
-            <span class="mood-pill">Savory</span>
-            <span class="mood-label">Salty</span>
-            <span class="mood-hint">meals, Turkish food, fries</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="swipe-screen hidden" id="swipeScreen" aria-live="polite">
-        <header class="topbar">
-          <button class="ghost-btn" type="button" id="backBtn">Change mood</button>
-          <div>
-            <p class="eyebrow" id="deckMood">Sugar</p>
-            <h2 id="deckTitle">Swipe the craving</h2>
+          <div class="choice-copy">
+            <p class="eyebrow">Zain's food chooser</p>
+            <h1 id="choiceTitle">Pick a mood</h1>
+            <p class="subcopy">Sweet or salty first, then swipe the food cards.</p>
           </div>
-          <button class="ghost-btn" type="button" id="resetBtn">Reset</button>
-        </header>
 
-        <div class="progress">
-          <span id="progressText">0 / 0</span>
-          <div class="progress-track"><span id="progressBar"></span></div>
-          <span id="pickedCount">0 yes</span>
-        </div>
+          <div class="choice-grid" aria-label="Choose food type">
+            <button class="mood-card sugar" type="button" data-start="sugar">
+              <span class="mood-photo" aria-hidden="true"></span>
+              <span class="mood-pill">Sweet</span>
+              <span class="mood-label">Sugar</span>
+              <span class="mood-hint">desserts, fruit, Nutella</span>
+            </button>
 
-        <div class="deck-wrap">
-          <div class="empty-state hidden" id="emptyState">
-            <p class="eyebrow">decision time</p>
-            <h2>Done.</h2>
-            <p id="doneText">Here are the foods she said yes to.</p>
-            <div class="picked-list" id="pickedList"></div>
-            <div class="result-actions">
-              <button class="primary-btn" type="button" id="againBtn">Start again</button>
-              <button class="ghost-btn" type="button" id="copyBtn">Copy picks</button>
+            <button class="mood-card salty" type="button" data-start="salty">
+              <span class="mood-photo" aria-hidden="true"></span>
+              <span class="mood-pill">Savory</span>
+              <span class="mood-label">Salty</span>
+              <span class="mood-hint">meals, Turkish food, fries</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="swipe-screen hidden" id="swipeScreen" aria-live="polite">
+          <header class="topbar">
+            <button class="top-icon button-icon" type="button" id="backBtn" aria-label="Change mood">●</button>
+            <div class="streak-pill">
+              <b>🔥</b>
+              <span id="deckMood">Sugar</span>
             </div>
+            <button class="top-icon button-icon chat" type="button" id="resetBtn" aria-label="Reset">●●</button>
+          </header>
+
+          <div class="progress">
+            <span id="progressText">0 / 0</span>
+            <div class="progress-track"><span id="progressBar"></span></div>
+            <span id="pickedCount">0 yes</span>
           </div>
 
-          <div class="deck" id="deck" aria-label="Swipe cards"></div>
-        </div>
+          <div class="deck-wrap">
+            <div class="empty-state hidden" id="emptyState">
+              <p class="eyebrow">decision time</p>
+              <h2>Done.</h2>
+              <p id="doneText">Here are the foods she said yes to.</p>
+              <div class="picked-list" id="pickedList"></div>
+              <div class="result-actions">
+                <button class="primary-btn" type="button" id="againBtn">Start again</button>
+                <button class="ghost-btn" type="button" id="copyBtn">Copy picks</button>
+              </div>
+            </div>
 
-        <div class="actions">
-          <button class="round-btn nope" type="button" id="noBtn" aria-label="Swipe left">
-            <span>No</span>
-            <small>left</small>
-          </button>
-          <button class="round-btn yes" type="button" id="yesBtn" aria-label="Swipe right">
-            <span>Yes</span>
-            <small>right</small>
-          </button>
-        </div>
-      </section>
+            <div class="deck" id="deck" aria-label="Swipe cards"></div>
+          </div>
+
+          <div class="actions">
+            <button class="round-btn undo" type="button" aria-label="Start again" id="againBtnVisual">↺</button>
+            <button class="round-btn nope" type="button" id="noBtn" aria-label="Swipe left">✕</button>
+            <button class="round-btn star" type="button" aria-label="Maybe">★</button>
+            <button class="round-btn yes" type="button" id="yesBtn" aria-label="Swipe right">♥</button>
+            <button class="round-btn boost" type="button" aria-label="Fast pick">ϟ</button>
+          </div>
+
+          <div class="home-indicator" aria-hidden="true"></div>
+        </section>
+      </div>
     </main>
 
     <script src="./food-list.js"></script>

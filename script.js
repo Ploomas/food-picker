@@ -158,6 +158,9 @@ const els = {
   doneText: document.querySelector("#doneText"),
   noBtn: document.querySelector("#noBtn"),
   yesBtn: document.querySelector("#yesBtn"),
+  againBtnVisual: document.querySelector("#againBtnVisual"),
+  starBtn: document.querySelector(".round-btn.star"),
+  boostBtn: document.querySelector(".round-btn.boost"),
   resetBtn: document.querySelector("#resetBtn"),
   backBtn: document.querySelector("#backBtn"),
   againBtn: document.querySelector("#againBtn"),
@@ -170,6 +173,9 @@ document.querySelectorAll("[data-start]").forEach((button) => {
 
 els.noBtn.addEventListener("click", () => choose(false));
 els.yesBtn.addEventListener("click", () => choose(true));
+els.againBtnVisual.addEventListener("click", () => start(state.mood));
+els.starBtn.addEventListener("click", () => choose(true));
+els.boostBtn.addEventListener("click", () => choose(true, { velocity: 1.25 }));
 els.resetBtn.addEventListener("click", () => start(state.mood));
 els.againBtn.addEventListener("click", () => start(state.mood));
 els.backBtn.addEventListener("click", showChoice);
@@ -204,7 +210,7 @@ function start(mood) {
   els.choiceScreen.classList.add("hidden");
   els.swipeScreen.classList.remove("hidden");
   els.emptyState.classList.add("hidden");
-  els.deckMood.textContent = mood === "sugar" ? "Sugar / sweet" : "Salty / savory";
+  els.deckMood.textContent = mood === "sugar" ? "Sweet" : "Salty";
   render();
 }
 
@@ -363,6 +369,9 @@ function setStampOpacity(card, x) {
 function setControlsDisabled(disabled) {
   els.noBtn.disabled = disabled;
   els.yesBtn.disabled = disabled;
+  els.againBtnVisual.disabled = disabled;
+  els.starBtn.disabled = disabled;
+  els.boostBtn.disabled = disabled;
   els.resetBtn.disabled = disabled;
   els.backBtn.disabled = disabled;
 }
