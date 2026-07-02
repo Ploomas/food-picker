@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --page-bg: #eef2f7;
   --ink: #20242c;
   --muted: #7f8794;
   --line: rgba(34, 42, 54, 0.12);
@@ -20,7 +21,7 @@ html,
 body {
   min-height: 100%;
   overflow-x: hidden;
-  background: #eef2f7;
+  background-color: var(--page-bg);
 }
 
 body {
@@ -33,6 +34,7 @@ body {
     radial-gradient(circle at 10% 10%, rgba(255, 132, 167, 0.2), transparent 22rem),
     radial-gradient(circle at 90% 18%, rgba(255, 211, 108, 0.24), transparent 22rem),
     linear-gradient(145deg, #f8fafc 0%, #eef2f7 100%);
+  background-color: var(--page-bg);
 }
 
 body::before {
@@ -61,6 +63,11 @@ button {
   place-items: center;
   overflow-x: hidden;
   padding: 24px;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 132, 167, 0.2), transparent 22rem),
+    radial-gradient(circle at 90% 18%, rgba(255, 211, 108, 0.24), transparent 22rem),
+    linear-gradient(145deg, #f8fafc 0%, #eef2f7 100%);
+  background-color: var(--page-bg);
 }
 
 .choice-screen,
@@ -563,8 +570,10 @@ button {
 
 @media (max-width: 780px) {
   .app {
-    height: var(--app-height);
+    height: calc(var(--app-height) + env(safe-area-inset-top) + env(safe-area-inset-bottom));
     min-height: 0;
+    margin-top: calc(-1 * env(safe-area-inset-top));
+    margin-bottom: calc(-1 * env(safe-area-inset-bottom));
     padding: max(12px, env(safe-area-inset-top)) 12px max(10px, env(safe-area-inset-bottom));
     align-items: start;
   }
@@ -609,7 +618,7 @@ button {
 
   .swipe-screen {
     width: 100%;
-    height: calc(var(--app-height) - max(22px, env(safe-area-inset-top)) - max(18px, env(safe-area-inset-bottom)));
+    height: calc(var(--app-height) - max(10px, env(safe-area-inset-top)) - max(10px, env(safe-area-inset-bottom)));
     min-height: 0;
     grid-template-rows: auto auto minmax(0, 1fr) 82px;
     gap: 5px;
