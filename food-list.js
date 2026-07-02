@@ -171,11 +171,11 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "KFC",
-      "image": "https://www.kindpng.com/picc/m/3-34196_donald-trump-kfc-fried-chicken-kfc-bucket-png.png"
+      "image": "https://wallpapers.com/images/high/k-f-c-fried-chicken-bucket-akg961k13m35473h.jpg"
     },
     {
       "name": "McDonald's",
-      "image": "https://toppng.com/uploads/preview/sub-salad-for-fries-no-problem-at-tucson-mcdonalds-medium-big-mac-meal-115635493996e6wa0n9k6.png"
+      "image": "https://wallpapers.com/images/high/mc-donalds-meal-combo-big-mac-fries-coke-cwkwymhf1o442h2h.jpg"
     },
     {
       "name": "Lahmacun",
