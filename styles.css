@@ -465,11 +465,10 @@ button {
 }
 
 .round-btn.yes {
-  width: 78px;
-  height: 78px;
   color: var(--yes);
-  font-size: 46px;
-  padding-bottom: 5px;
+  font-size: 40px;
+  padding: 0;
+  line-height: 1;
 }
 
 .empty-state {
@@ -620,9 +619,7 @@ button {
   }
 
   .round-btn.yes {
-    width: 70px;
-    height: 70px;
-    font-size: 42px;
+    font-size: 36px;
   }
 }
 
@@ -650,5 +647,9 @@ button {
   .round-btn {
     width: 58px;
     height: 58px;
+  }
+
+  .round-btn.yes {
+    font-size: 34px;
   }
 }
