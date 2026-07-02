@@ -80,6 +80,12 @@ const state = {
   animating: false
 };
 
+syncViewportHeight();
+window.addEventListener("resize", syncViewportHeight);
+window.addEventListener("orientationchange", syncViewportHeight);
+window.visualViewport?.addEventListener("resize", syncViewportHeight);
+window.visualViewport?.addEventListener("scroll", syncViewportHeight);
+
 const photos = {
   alfredo: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=900&h=1200&fit=crop&auto=format&q=80",
   apples: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=900&h=1200&fit=crop&auto=format&q=80",
@@ -191,6 +197,11 @@ function food(name, photoKey) {
   };
 }
 
+function syncViewportHeight() {
+  const height = window.visualViewport?.height || window.innerHeight;
+  document.documentElement.style.setProperty("--app-height", `${height}px`);
+}
+
 function start(mood) {
   const sourceFoods = getFoodSource();
 
@@ -272,8 +283,21 @@ function fallbackPhoto(name) {
 }
 
 function haptic(pattern = 12) {
-  if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return;
+  if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") {
+    visualHaptic();
+    return;
+  }
   navigator.vibrate(pattern);
+  visualHaptic();
+}
+
+function visualHaptic() {
+  [els.noBtn, els.undoBtn, els.yesBtn].forEach((button) => {
+    button.classList.remove("haptic-pop");
+    void button.offsetWidth;
+    button.classList.add("haptic-pop");
+    setTimeout(() => button.classList.remove("haptic-pop"), 220);
+  });
 }
 
 function choose(accepted, options = {}) {
