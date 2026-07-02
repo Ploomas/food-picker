@@ -234,7 +234,7 @@ function render() {
   nextCards.forEach((foodItem, offset) => {
     const depth = nextCards.length - offset - 1;
     const card = createCard(foodItem);
-    card.style.transform = `translateY(${depth * 12}px) scale(${1 - depth * 0.035})`;
+    card.style.transform = `translate3d(0, ${depth * 8}px, 0) scale(${1 - depth * 0.025})`;
     card.style.zIndex = String(10 + offset);
     els.deck.append(card);
   });
@@ -288,13 +288,13 @@ function choose(accepted, options = {}) {
 
   const direction = accepted ? 1 : -1;
   const deckWidth = els.deck.getBoundingClientRect().width || 440;
-  const exitDistance = Math.max(window.innerWidth, deckWidth * 2.2);
+  const exitDistance = Math.max(window.innerWidth + 80, deckWidth * 2.1);
   const velocity = options.velocity || 1;
-  const startY = options.y || -24;
-  const rotation = options.rotation || direction * 24;
+  const startY = options.y || -12;
+  const rotation = options.rotation || direction * 18;
 
   card.classList.add("exiting");
-  card.style.transform = `translate(${direction * exitDistance * velocity}px, ${startY - 28}px) rotate(${rotation}deg)`;
+  card.style.transform = `translate3d(${direction * exitDistance * velocity}px, ${startY - 18}px, 0) rotate(${rotation}deg)`;
   card.style.opacity = "0";
 
   state.index += 1;
@@ -302,7 +302,7 @@ function choose(accepted, options = {}) {
     render();
     state.animating = false;
     setControlsDisabled(false);
-  }, 230);
+  }, 280);
 }
 
 function undoChoice() {
@@ -346,9 +346,9 @@ function attachDrag(card) {
     if (!dragging) return;
     currentX = event.clientX - startX;
     currentY = event.clientY - startY;
-    const rotate = clamp(currentX / 13, -18, 18);
-    const lift = Math.min(10, Math.abs(currentX) / 18);
-    card.style.transform = `translate(${currentX}px, ${currentY - lift}px) rotate(${rotate}deg)`;
+    const rotate = clamp(currentX / 18, -14, 14);
+    const lift = Math.min(8, Math.abs(currentX) / 24);
+    card.style.transform = `translate3d(${currentX}px, ${currentY - lift}px, 0) rotate(${rotate}deg)`;
     setStampOpacity(card, currentX);
   });
 
@@ -366,7 +366,7 @@ function attachDrag(card) {
     if (Math.abs(currentX) > threshold) {
       choose(currentX > 0, {
         velocity: clamp(Math.abs(currentX) / threshold, 1, 1.45),
-        rotation: clamp(currentX / 11, -28, 28),
+        rotation: clamp(currentX / 15, -20, 20),
         y: currentY
       });
       return;
