@@ -325,6 +325,11 @@ button {
   object-fit: cover;
 }
 
+.card img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
 .card::after {
   content: "";
   position: absolute;

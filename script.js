@@ -244,7 +244,7 @@ function createCard(foodItem) {
   card.innerHTML = `
     <span class="stamp no">No</span>
     <span class="stamp yes">Yes</span>
-    <img src="${foodItem.image}" alt="${foodItem.name}" loading="eager" referrerpolicy="no-referrer" />
+    <img src="${foodItem.image}" alt="${foodItem.name}" loading="eager" draggable="false" referrerpolicy="no-referrer" />
     <div class="card-shine" aria-hidden="true"></div>
     <div class="card-content">
       <h3 class="card-title">${foodItem.name}</h3>
@@ -252,6 +252,7 @@ function createCard(foodItem) {
   `;
 
   const image = card.querySelector("img");
+  image.addEventListener("dragstart", (event) => event.preventDefault());
   image.addEventListener("error", () => {
     image.replaceWith(fallbackPhoto(foodItem.name));
   });
