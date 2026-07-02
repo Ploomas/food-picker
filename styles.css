@@ -528,28 +528,34 @@ button {
 
   .choice-screen {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 14px;
   }
 
   .choice-copy {
-    padding: 8px 0 0;
+    padding: 0;
     text-align: left;
   }
 
   .choice-copy h1 {
-    font-size: 54px;
+    font-size: clamp(42px, 13vw, 54px);
+  }
+
+  .subcopy {
+    margin-top: 10px;
+    font-size: 15px;
   }
 
   .choice-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .mood-card {
-    min-height: 250px;
+    min-height: clamp(205px, 30dvh, 250px);
   }
 
   .mood-label {
-    margin-top: 116px;
+    margin-top: clamp(82px, 13dvh, 116px);
   }
 
   .swipe-screen {
