@@ -13,7 +13,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Kinder Bueno",
-      "image": "https://cdn.mafrservices.com/pim-content/KWT/media/product/317301/1722866403/317301_main.jpg"
+      "image": "https://europeanfoodexpress.com/wp-content/uploads/2022/10/Snack_2525.jpg"
     },
     {
       "name": "Chocolate",
@@ -259,7 +259,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Pickles",
-      "image": "https://images.unsplash.com/photo-1600431521340-491eca880813?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://images.squarespace-cdn.com/content/v1/60997df595487c0d1d56d015/9d535c6f-0268-4b66-a774-7849b9ee911f/Pickles.jpg"
     },
     {
       "name": "Extra cheese",

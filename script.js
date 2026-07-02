@@ -131,7 +131,7 @@ const photos = {
   oranges: "https://images.unsplash.com/photo-1547514701-42782101795e?w=900&h=1200&fit=crop&auto=format&q=80",
   pancakes: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=900&h=1200&fit=crop&auto=format&q=80",
   pasta: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=900&h=1200&fit=crop&auto=format&q=80",
-  pickles: "https://images.unsplash.com/photo-1600431521340-491eca880813?w=900&h=1200&fit=crop&auto=format&q=80",
+  pickles: "https://images.squarespace-cdn.com/content/v1/60997df595487c0d1d56d015/9d535c6f-0268-4b66-a774-7849b9ee911f/Pickles.jpg",
   pide: "https://images.unsplash.com/photo-1593504049359-74330189a345?w=900&h=1200&fit=crop&auto=format&q=80",
   pizza: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&h=1200&fit=crop&auto=format&q=80",
   pudding: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=900&h=1200&fit=crop&auto=format&q=80",
