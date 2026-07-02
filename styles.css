@@ -176,8 +176,8 @@ button {
 .swipe-screen {
   min-height: min(820px, calc(100vh - 48px));
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) 88px;
-  gap: 14px;
+  grid-template-rows: auto auto minmax(0, 1fr) 92px;
+  gap: 12px;
 }
 
 .topbar {
@@ -270,13 +270,13 @@ button {
   place-items: center;
   min-height: 0;
   overflow: visible;
-  padding-bottom: 8px;
+  padding-bottom: 18px;
 }
 
 .deck {
   position: relative;
-  width: min(430px, 92vw);
-  height: clamp(330px, 54vh, 560px);
+  width: min(470px, 92vw);
+  height: clamp(390px, calc(100vh - 300px), 620px);
   max-height: 100%;
   aspect-ratio: 3 / 4.15;
 }
@@ -553,7 +553,7 @@ button {
   .swipe-screen {
     width: 100%;
     min-height: calc(100vh - 36px);
-    grid-template-rows: auto auto minmax(0, 1fr) 86px;
+    grid-template-rows: auto auto minmax(0, 1fr) 88px;
   }
 
   .topbar {
@@ -572,8 +572,8 @@ button {
   }
 
   .deck {
-    width: min(390px, 94vw);
-    height: clamp(340px, 56vh, 520px);
+    width: min(430px, 94vw);
+    height: clamp(380px, calc(100vh - 270px), 560px);
     max-height: 100%;
   }
 
@@ -601,7 +601,7 @@ button {
   }
 
   .deck {
-    height: clamp(290px, 48vh, 420px);
+    height: clamp(320px, calc(100vh - 270px), 450px);
   }
 
   .round-btn {
