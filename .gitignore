@@ -1,0 +1,8 @@
+node_modules/
+*.xlsx
+*.xlsx.inspect.ndjson
+*.log
+Refresh Excel image previews.bat
+Update website from Excel.bat
+update-food-list-from-excel.mjs
+
