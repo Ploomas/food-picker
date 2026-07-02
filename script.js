@@ -41,7 +41,7 @@ const foods = {
     food("Doner", "doner"),
     food("Falafel", "falafel"),
     food("Tacos", "tacos"),
-    food("Popeyes", "friedChicken"),
+    food("Popeyes", "popeyes"),
     food("KFC", "friedChicken"),
     food("McDonald's", "burger"),
     food("Lahmacun", "lahmacun"),
@@ -65,7 +65,6 @@ const foods = {
     food("Beans", "beans"),
     food("Meatballs", "meatballs"),
     food("Pickles", "pickles"),
-    food("Extra cheese", "cheese"),
     food("Mushrooms", "mushrooms"),
     food("Tomatoes", "tomatoes")
   ]
@@ -110,7 +109,7 @@ const photos = {
   dolma: "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&h=1200&fit=crop&auto=format&q=80",
   doner: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=900&h=1200&fit=crop&auto=format&q=80",
   donuts: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=900&h=1200&fit=crop&auto=format&q=80",
-  eggs: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80",
+  eggs: "https://commons.wikimedia.org/wiki/Special:FilePath/Scrambled_eggs.jpg",
   falafel: "https://images.unsplash.com/photo-1593001874117-c99c800e3eb8?w=900&h=1200&fit=crop&auto=format&q=80",
   flatbread: "https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=900&h=1200&fit=crop&auto=format&q=80",
   frenchToast: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=900&h=1200&fit=crop&auto=format&q=80",
@@ -134,6 +133,7 @@ const photos = {
   pickles: "https://images.squarespace-cdn.com/content/v1/60997df595487c0d1d56d015/9d535c6f-0268-4b66-a774-7849b9ee911f/Pickles.jpg",
   pide: "https://images.unsplash.com/photo-1593504049359-74330189a345?w=900&h=1200&fit=crop&auto=format&q=80",
   pizza: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&h=1200&fit=crop&auto=format&q=80",
+  popeyes: "https://images.keizai.biz/colombo_keizai/photonews/1614570974_b.jpg",
   pudding: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=900&h=1200&fit=crop&auto=format&q=80",
   ramen: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=900&h=1200&fit=crop&auto=format&q=80",
   raspberries: "https://images.unsplash.com/photo-1577069861033-55d04cec4ef5?w=900&h=1200&fit=crop&auto=format&q=80",
@@ -147,7 +147,7 @@ const photos = {
   sushi: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=900&h=1200&fit=crop&auto=format&q=80",
   tacos: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=900&h=1200&fit=crop&auto=format&q=80",
   tiramisu: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=900&h=1200&fit=crop&auto=format&q=80",
-  toast: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80",
+  toast: "https://www.jagranimages.com/images/newimg/13042025/13_04_2025-side_effects_of_bread_in_breakfast_23918008.jpg",
   tomatoes: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=900&h=1200&fit=crop&auto=format&q=80",
   waffles: "https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=900&h=1200&fit=crop&auto=format&q=80"
 };

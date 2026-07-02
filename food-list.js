@@ -167,7 +167,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Popeyes",
-      "image": "https://townsquare.media/site/166/files/2019/10/Popeyes-Chicken-Sandwich.png?w=1200&q=75&format=natural"
+      "image": "https://images.keizai.biz/colombo_keizai/photonews/1614570974_b.jpg"
     },
     {
       "name": "KFC",
@@ -219,7 +219,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Eggs",
-      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scrambled_eggs.jpg"
     },
     {
       "name": "Bread / flatbread",
@@ -227,7 +227,7 @@ window.FOOD_PICKER_FOODS = {
     },
     {
       "name": "Toast",
-      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&h=1200&fit=crop&auto=format&q=80"
+      "image": "https://www.jagranimages.com/images/newimg/13042025/13_04_2025-side_effects_of_bread_in_breakfast_23918008.jpg"
     },
     {
       "name": "Salad",
@@ -260,10 +260,6 @@ window.FOOD_PICKER_FOODS = {
     {
       "name": "Pickles",
       "image": "https://images.squarespace-cdn.com/content/v1/60997df595487c0d1d56d015/9d535c6f-0268-4b66-a774-7849b9ee911f/Pickles.jpg"
-    },
-    {
-      "name": "Extra cheese",
-      "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=900&h=1200&fit=crop&auto=format&q=80"
     },
     {
       "name": "Mushrooms",
