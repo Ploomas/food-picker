@@ -76,6 +76,7 @@ const state = {
   deck: [],
   index: 0,
   picked: [],
+  history: [],
   animating: false
 };
 
@@ -157,6 +158,7 @@ const els = {
   pickedList: document.querySelector("#pickedList"),
   doneText: document.querySelector("#doneText"),
   noBtn: document.querySelector("#noBtn"),
+  undoBtn: document.querySelector("#undoBtn"),
   yesBtn: document.querySelector("#yesBtn"),
   resetBtn: document.querySelector("#resetBtn"),
   backBtn: document.querySelector("#backBtn"),
@@ -170,6 +172,7 @@ document.querySelectorAll("[data-start]").forEach((button) => {
 
 els.noBtn.addEventListener("click", () => choose(false));
 els.yesBtn.addEventListener("click", () => choose(true));
+els.undoBtn.addEventListener("click", undoChoice);
 els.resetBtn.addEventListener("click", () => start(state.mood));
 els.againBtn.addEventListener("click", () => start(state.mood));
 els.backBtn.addEventListener("click", showChoice);
@@ -198,6 +201,7 @@ function start(mood) {
   })));
   state.index = 0;
   state.picked = [];
+  state.history = [];
   state.animating = false;
   setControlsDisabled(false);
 
@@ -275,6 +279,11 @@ function choose(accepted, options = {}) {
 
   state.animating = true;
   setControlsDisabled(true);
+  state.history.push({
+    item: state.deck[state.index],
+    accepted
+  });
+
   if (accepted) state.picked.push(state.deck[state.index]);
 
   const direction = accepted ? 1 : -1;
@@ -294,6 +303,23 @@ function choose(accepted, options = {}) {
     state.animating = false;
     setControlsDisabled(false);
   }, 230);
+}
+
+function undoChoice() {
+  if (state.animating || state.history.length === 0) return;
+
+  const previous = state.history.pop();
+  state.index = Math.max(0, state.index - 1);
+
+  if (previous.accepted) {
+    const pickedIndex = state.picked.lastIndexOf(previous.item);
+    if (pickedIndex !== -1) state.picked.splice(pickedIndex, 1);
+  }
+
+  els.emptyState.classList.add("hidden");
+  els.copyBtn.disabled = false;
+  render();
+  setControlsDisabled(false);
 }
 
 function attachDrag(card) {
@@ -363,6 +389,7 @@ function setStampOpacity(card, x) {
 function setControlsDisabled(disabled) {
   els.noBtn.disabled = disabled;
   els.yesBtn.disabled = disabled;
+  els.undoBtn.disabled = disabled || state.history.length === 0;
   els.resetBtn.disabled = disabled;
   els.backBtn.disabled = disabled;
 }
