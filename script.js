@@ -271,12 +271,18 @@ function fallbackPhoto(name) {
   return fallback;
 }
 
+function haptic(pattern = 12) {
+  if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return;
+  navigator.vibrate(pattern);
+}
+
 function choose(accepted, options = {}) {
   if (state.animating || state.index >= state.deck.length) return;
 
   const card = els.deck.lastElementChild;
   if (!card) return;
 
+  haptic(accepted ? [12, 30, 18] : 18);
   state.animating = true;
   setControlsDisabled(true);
   state.history.push({
@@ -308,6 +314,7 @@ function choose(accepted, options = {}) {
 function undoChoice() {
   if (state.animating || state.history.length === 0) return;
 
+  haptic(10);
   const previous = state.history.pop();
   state.index = Math.max(0, state.index - 1);
 
@@ -334,6 +341,7 @@ function attachDrag(card) {
   card.addEventListener("pointerdown", (event) => {
     if (state.animating) return;
     dragging = true;
+    haptic(6);
     startX = event.clientX;
     startY = event.clientY;
     currentX = 0;
